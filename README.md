@@ -18,6 +18,19 @@ A 4 KB chess engine in Python (stdlib only) for the [make.fun tiny-chess-01 boun
 unpacks to the full engine at import time; the payload and its unpacker
 together stay within the 4,096-byte limit.
 
+## Practice results
+
+Practice trial 0 against the six practice gauntlet engines: **Elo 1545**
+(4 wins, 1 draw, 1 loss).
+
+- Wins by checkmate vs depth-2, depth-3, depth-4 and nodes-100k
+- Draw vs nodes-250k by threefold repetition
+- Loss vs nodes-500k by checkmate
+
+That is about 180 Elo above the sunfish house baseline (~1365) and well
+above the 1,154 qualification bar. Move generation is verified by perft:
+start position 20/400/8902/197281, Kiwipete 48/2039/97862.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
